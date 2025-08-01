@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Registration Form</title>
+</head>
+<style>
+  body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: lavender;
+  height: 100vh;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+h1 {
+  font-size: 3em;
+  color: purple;
+  text-shadow: 4px 4px 4px black;
+  margin: 0;
+  font-weight: 700;
+  text-align: center;
+}
+
+form {
+  background: lavender;
+  padding: 20px 60px;
+  border-radius: 50px;
+  border: 2px solid black;
+  width: 250px;
+  box-shadow: 0 8px 40px rgba(0, 0, 0, 0.7);
+}
+
+label {
+  display: block;
+  margin-bottom: 6px;
+  font-weight: 600;
+  color: black;
+}
+
+input[type="text"],
+input[type="number"],
+input[type="password"] {
+  width: 100%;
+  padding: 10px 12px;
+  margin-bottom: 18px;
+  border: 2px solid black;
+  border-radius: 20px;
+  font-size: 1em;
+  transition: border-color 0.3s ease, background-color 0.3s ease;
+}
+
+input[type="text"]:hover,
+input[type="number"]:hover,
+input[type="password"]:hover {
+  border-color: purple;
+  background-color: lavenderblush;
+}
+
+input[type="text"]:focus,
+input[type="number"]:focus,
+input[type="password"]:focus {
+  border-color: green;
+  background-color: lavenderblush;
+  outline: none;
+}
+
+input[type="submit"] {
+  width: 100%;
+  background-color: purple;
+  color: white;
+  font-size: 1.1em;
+  padding: 12px;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  font-weight: 700;
+  transition: background-color 0.3s ease;
+}
+
+input[type="submit"]:focus {
+  background-color: #45a049;
+}
+
+#errname {
+  color: red;
+  display: none;
+  margin-top: -15px;
+  margin-bottom: 10px;
+}
+
+</style>
+<body>
+  <h1>Registration Form</h1>
+
+  <form onsubmit="return submitform(event)">
+    <label for="name">Name :</label>
+    <input type="text" id="name" placeholder="Enter your name" />
+    <p id="errname">Enter a valid name</p>
+
+    <label for="mail">Email :</label>
+    <input type="text" id="mail" placeholder="@gmail.com" />
+
+    <label for="pass">Password :</label>
+    <input type="password" id="pass" placeholder="Enter your password" />
+
+    <label for="pass1">Confirm Password :</label>
+    <input type="password" id="pass1" placeholder="Re-enter your password" />
+
+    <label for="phno">Ph No :</label>
+    <input type="number" id="phno" placeholder="At least 10 digits" />
+
+    <input type="submit" value="Submit" />
+  </form>
+
+  <script src="form.js"></script>
+</body>
+</html>
